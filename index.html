@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kaaviyaa Toy World</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            background: #fff0f7;
+            color: #7a2855;
+        }
+
+
+        /* ---------------- HEADER ---------------- */
+
+        header {
+            background: linear-gradient(135deg, #ffb6d9, #e9c6ff);
+            text-align: center;
+            padding: 35px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            color: #c21868;
+            font-size: 48px;
+            margin: 5px 0;
+            text-shadow: 2px 2px white;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #71365d;
+        }
+
+        nav {
+            margin-top: 25px;
+        }
+
+        nav a {
+            color: #c21868;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff1493;
+        }
+
+        /* ---------------- HERO SECTION ---------------- */
+
+        .hero {
+            background: linear-gradient(135deg, #ffb6d9, #ffd1e8);
+            padding: 60px 20px;
+            text-align: center;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            color: #c21868;
+            margin: 10px 0;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #71365d;
+            margin: 20px 0;
+        }
+
+        .cta-button {
+            background: #c21868;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 5px;
+        }
+
+        .cta-button:hover {
+            background: #ff1493;
+        }
+
+        /* ---------------- PRODUCTS SECTION ---------------- */
+
+        .products-section {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .products-section h2 {
+            text-align: center;
+            font-size: 42px;
+            color: #c21868;
+            margin-bottom: 40px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(194, 24, 104, 0.2);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(194, 24, 104, 0.3);
+        }
+
+        .product-card h3 {
+            color: #c21868;
+            font-size: 24px;
+            margin: 15px 0;
+        }
+
+        .product-card p {
+            color: #7a2855;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .product-icon {
+            font-size: 64px;
+            margin: 20px 0;
+        }
+
+        /* ---------------- ABOUT SECTION ---------------- */
+
+        .about {
+            background: #ffe4f0;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 42px;
+            color: #c21868;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 18px;
+            color: #7a2855;
+            max-width: 800px;
+            margin: 15px auto;
+            line-height: 1.8;
+        }
+
+        /* ---------------- CONTACT SECTION ---------------- */
+
+        .contact {
+            background: linear-gradient(135deg, #ffb6d9, #e9c6ff);
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 42px;
+            color: #c21868;
+            margin-bottom: 30px;
+        }
+
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 2px solid #c21868;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 16px;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .contact-form button {
+            background: #c21868;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .contact-form button:hover {
+            background: #ff1493;
+        }
+
+        /* ---------------- FOOTER ---------------- */
+
+        footer {
+            background: #7a2855;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #ffb6d9;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ---------------- ANIMATIONS ---------------- */
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 36px;
+            }
+
+            .hero h2 {
+                font-size: 28px;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>🧸 Kaaviyaa Toy World 🧸</h1>
+        <p>Your Gateway to Joy and Imagination</p>
+        <nav>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h2>Welcome to Toy World!</h2>
+        <p>Explore our amazing collection of toys and bring joy to your loved ones.</p>
+        <button class="cta-button">Shop Now</button>
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+    <section class="products-section" id="products">
+        <h2>Our Collections</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-icon">🎨</div>
+                <h3>Art & Craft</h3>
+                <p>Creative toys that inspire imagination and artistic expression for all ages.</p>
+            </div>
+            <div class="product-card">
+                <div class="product-icon">🚀</div>
+                <h3>Action Figures</h3>
+                <p>Collectible and fun action figures from popular franchises and original designs.</p>
+            </div>
+            <div class="product-card">
+                <div class="product-icon">🧩</div>
+                <h3>Puzzles & Games</h3>
+                <p>Brain-teasing puzzles and board games for family entertainment.</p>
+            </div>
+            <div class="product-card">
+                <div class="product-icon">🎲</div>
+                <h3>Educational</h3>
+                <p>Learning toys that make education fun and engaging for young minds.</p>
+            </div>
+            <div class="product-card">
+                <div class="product-icon">🧸</div>
+                <h3>Plush Toys</h3>
+                <p>Soft and cuddly plush toys that are perfect companions for children.</p>
+            </div>
+            <div class="product-card">
+                <div class="product-icon">🏗️</div>
+                <h3>Building Sets</h3>
+                <p>Construction and building toys that develop spatial and problem-solving skills.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+        <h2>About Kaaviyaa Toy World</h2>
+        <p>
+            At Kaaviyaa Toy World, we believe that toys are more than just playthings – they are gateways to imagination,
+            creativity, and learning. Our mission is to provide high-quality, safe, and entertaining toys that bring joy
+            to children and families worldwide.
+        </p>
+        <p>
+            With over 25 years of experience in the toy industry, we have curated a diverse collection that caters to
+            every age group and interest. Our commitment to excellence and customer satisfaction is unmatched.
+        </p>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <h2>Get in Touch</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Kaaviyaa Toy World. All rights reserved.</p>
+        <p>
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact Us</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>
